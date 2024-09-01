@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<body>
+    <form action="/file" method="get" onsubmit="return validateInput();">
+        <input type="text" name="file" placeholder="Введите имя файла">
+        <input type="submit" value="Просмотреть">
+    </form>
+
+<h2>Файлы которые вы можите прочитать:</h2>
+{% for file in files %}
+<h3>{{file}}</h3>
+
+{% endfor %}
+</body>
+</html>
+
